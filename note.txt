@@ -1,0 +1,11 @@
+
+Transaksi
+==========================
+Balance ditransaksi: 
+
+	Jika uang
+		- Seluruh total dari muzakki yang status CLOSED & Jenis ZIS == "Uang"
+
+	Jika Makanan
+		- Seluruh total dari muzakki yang status CLOSED & jenis ZIS == "Makanan DLL"
+

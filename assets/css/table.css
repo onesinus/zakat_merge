@@ -1,0 +1,12 @@
+table.dataTable thead tr, .table-blue thead tr {
+    background-color: #007bff;
+    color: white;
+}
+
+#main {
+    display: none;
+}
+
+.table tr td {
+    padding: 0.5%;
+}
