@@ -16,7 +16,7 @@
     class="btn btn-primary"
     style='float: left;'
 >
-    Add New Muzakki
+    Tambah Muzakki
 </a>
 <table 
     class="table"
@@ -28,16 +28,16 @@
     >
         #
       </th>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
+      <th>Nama</th>
+      <th>Jenis</th>
+      <th>Keterangan</th>
       <th>Total</th>
       <th>Status</th>
-      <th>Created</th>
+      <th>Dibuat</th>
       <th
         style='width: 35%'  
       >
-        Actions
+        Aksi
     </th>
   </tr>
   </thead>

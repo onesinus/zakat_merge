@@ -1,5 +1,6 @@
 <?php
     $id = isset($_GET['id']) ? $_GET['id'] : 0;
+    $idTransDetail = isset($_GET['idTransDetail']) ? $_GET['idTransDetail'] : 0;
     $query = "
         SELECT 
             *
@@ -10,10 +11,10 @@
 
     $datas = $conn->query($query) or die(mysqli_error($conn));
     $transaction = $datas->fetch_assoc();
-
+    
     $query2 = "
         SELECT * FROM transaction_details
-        WHERE transaction_id = '$id'
+        WHERE id = '$idTransDetail'
     ";
 
     $details = $conn->query($query2) or die(mysqli_error($conn));
@@ -25,30 +26,30 @@
     data-id='<?php echo $transaction["id"]; ?>' 
     class="btnApprove btn btn-success float-right"
 >
-    Approve
+    Validasi
 </button>
 <?php
     endif;
 ?>
-<a href='index.php?page=transactions' class="btn btn-primary mr-1 float-right">List Transaction</a>
-<h1 class='text-center'>Detail Transaction</h1>
+<a href='index.php?page=transactions' class="btn btn-primary mr-1 float-right">List Transaksi</a>
+<h1 class='text-center'>Detail Transaksi</h1>
 <table class='table'>
     <tr>
         <th>ID ZIS</th>
         <td>
             <?php echo $transaction['id'] ?>
         </td>
-        <th>Type</th>
+        <th>Jenis</th>
         <td>
             <?php echo $transaction['type'] ?>
         </td>
     </tr>
     <tr>
-        <th>Created Date</th>
+        <th>Tanggal</th>
         <td>
             <?php echo $transaction['created_date'] ?>            
         </td>
-        <th>Approved Date</th>
+        <th>Validasi Tanggal</th>
         <td>
             <?php echo $transaction['approved_date'] ?>
         </td>
@@ -62,10 +63,10 @@
     >
         <thead>
             <tr>
-                <th>Description</th>
-                <th>Balance</th>
-                <th>Remaining Balance</th>
-                <th>Amount</th>
+                <th>Keterangan</th>
+                <th>Saldo</th>
+                <th>Sisa Saldo</th>
+                <th>Jumlah</th>
             </tr>
         </thead>
         <tbody>
@@ -93,9 +94,9 @@
         <thead>
             <tr>
                 <th>Mustahik</th>
-                <th>Balance</th>
-                <th>Remaining Balance</th>
-                <th>Amount</th>
+                <th>Saldo</th>
+                <th>Sisa Saldo</th>
+                <th>Jumlah</th>
             </tr>
         </thead>
         <tbody>

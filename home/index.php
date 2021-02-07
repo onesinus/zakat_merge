@@ -1,3 +1,5 @@
-<h1 style='text-align: center;'>
-    Welcome <?php echo $username; ?> to Zakat Apps
-</h1>
+<h4 style='text-align: center;'>
+    Assalamu'alaikum <?php echo $username; ?> 
+</h4>
+<h4 style='text-align: center;'>
+    di Aplikasi Zakat Infaq Sedekah (ZIS) </h4>

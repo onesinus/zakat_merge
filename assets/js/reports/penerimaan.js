@@ -29,17 +29,17 @@ $(document).ready(function() {
             `)
         })
     }
-    $("#from_date, #to_date").change(function() {
+    $("#from_date, #to_date, #status").change(function() {
         let from_date = $("#from_date").val();
         let to_date = $("#to_date").val();
+        let status = $("#status").val();
         
         if (from_date && to_date) {
             $.ajax({
                 url: "actions/reports/generate_penerimaan.php",
                 type: "POST",
-                data: { from_date, to_date },
+                data: { from_date, to_date, status },
                 success: function (response) {
-                    console.log(response)
                     if (response) {
                         response = JSON.parse(response);
                         fillReportData(response)

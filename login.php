@@ -9,8 +9,9 @@
     require "layouts/header.php";
     require "configurations/connect.php";
 ?>
-<main class="container text-center col-md-6" style='margin-top: 10vh;'>
-    <h1 class='display-4'>Sign In</h1>
+<main class="container text-center col-md-3" style='margin-top: 15vh;'>
+<h4 class='display-6'>أهلا و سهلا</h4>
+    <h4 class='display-6'>Selamat Datang</h4>
     <?php
         if(isset($_SESSION['message'])):
     ?>

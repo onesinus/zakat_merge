@@ -7,17 +7,23 @@
         $status = isset($_POST['status']) ? $_POST['status'] : '';
 
         $query = "
-            SELECT 
-                t.id, 
-                td.note, 
-                td.amount, 
-                t.status, 
-                t.created_date 
-            FROM transactions t
-            INNER JOIN transaction_details td
-            ON t.id = td.transaction_id
-            WHERE td.type = 'Uang'
-        ";
+        SELECT 
+        t.id, 
+        t.type,
+        td.type as type_detail,
+        td.note, 
+        td.amount,
+        td.total_unit, 
+        t.status, 
+        t.created_date 
+    FROM transactions t
+    INNER JOIN transaction_details td
+    ON t.id = td.transaction_id
+    WHERE 
+        td.note != ''
+        AND
+        td.type = 'Uang'
+";
 
         if($from_date && $to_date) {
             $query .= "AND t.created_date >= '$from_date 00:00:00' AND t.created_date <= '$to_date 23:59:59'";

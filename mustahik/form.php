@@ -19,7 +19,7 @@
     $data = $execute_query->fetch_assoc();    
   }
 ?>
-<h2 class='text-center'>Form Mustahik</h2>
+<h2 class='text-center'>Tambah Mustahik</h2>
 <form action="actions/mustahik/save_data.php" method="post">
     <table class='table'>
         <tr>
@@ -67,8 +67,8 @@
         </tr>
 
     </table>
-    <button type='submit' class='btn btn-primary'><i class="fas fa-save"></i> Save Master</button>
-    <a href='index.php?page=mustahik' class='btn btn-secondary'><i class="fas fa-arrow-left"></i> Cancel</a>
+    <button type='submit' class='btn btn-primary'><i class="fas fa-save"></i> Simpan Mustahik</button>
+    <a href='index.php?page=mustahik' class='btn btn-secondary'><i class="fas fa-arrow-left"></i> Batal</a>
 
 </form>    
 <script src="assets/js/mustahik/form.js"></script>

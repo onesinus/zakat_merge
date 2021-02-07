@@ -20,7 +20,7 @@
     class="btn btn-primary"
     style='float: left;'
 >
-    Add New User
+    Tambah Pengguna
 </a>
 <table
     class="table"
@@ -33,13 +33,13 @@
         #
     </th>
       <th>Nama</th>
-      <th>NIK Karyawan</th>
+      <th>NIK Pengurus</th>
       <th>Jabatan</th>
       <th>Hak Akses</th>
       <th
           style='width: 35%'  
       >
-        Actions
+        Aksi
     </th>
     </tr>
   </thead>

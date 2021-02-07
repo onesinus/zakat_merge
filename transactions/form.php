@@ -11,7 +11,7 @@
   );
 
   $id = isset($_GET['id']) ? $_GET['id'] : 0;
-  $title = $id == 0 ? 'Add Transaction' : 'Edit Transaction';
+  $title = $id == 0 ? 'Tambah Transaksi' : 'Edit Transaksi';
 
   $get_balance = "
       SELECT 
@@ -78,7 +78,7 @@
         <td>
             <?php echo $data['id']; ?>
         </td>
-        <th>Type</th>
+        <th>Jenis</th>
         <td>
             <select 
                 class="form-control" 
@@ -90,11 +90,11 @@
         </td>
     </tr>
     <tr>
-        <th>Created Date</th>
+        <th>Tanggal</th>
         <td>
             <input type="text" id="created_date" class="form-control" disabled />
         </td>
-        <th>Approved Date</th>
+        <th>Tanggal Validasi</th>
         <td>
             <input type="text" id="approved_date" class="form-control col-md-8" disabled />
         </td>
@@ -108,11 +108,11 @@
 >
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Add Mustahik</th>
-      <th>Balance</th>
-      <th>Remaining Balance</th>
-      <th>Total (KG)</th>
+      <th>Jenis</th>
+      <th>Pilih Mustahik</th>
+      <th>Saldo</th>
+      <th>Sisa Saldo</th>
+      <th>Total Sesuai Jenis</th>
       <th>Total Mustahik</th>
       <th></th>
     </tr>
@@ -205,7 +205,7 @@
   </tbody>
 </table>
 <div class="penyaluranSection">
-    <button class='btn btn-primary' id='btnSavePenyaluran'><i class="fas fa-save"></i> Save Transaction</button>
+    <button class='btn btn-primary' id='btnSavePenyaluran'><i class="fas fa-save"></i> Simpan Transaksi</button>
 </div>
 <!-- Akhir Penyaluran Table -->
 
@@ -216,16 +216,16 @@
 >
   <thead>
     <tr>
-      <th>Master</th>
-      <th>Description</th>
-      <th>Balance</th>
-      <th>Remaining Balance</th>
-      <th>Amount</th>
+      <th>Kategori ZIS</th>
+      <th>Keterangan</th>
+      <th>Saldo</th>
+      <th>Sisa Saldo</th>
+      <th>Jumlah</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <?php
+  <?php
         $get_master = "SELECT * FROM masters";
     
         $masters = $conn->query($get_master) or die(mysqli_error($conn));
@@ -313,8 +313,8 @@
         $idx_pengeluaran++;
         endwhile;
     ?>
-  </tbody>
-  <tfoot>
+    </tbody>
+    <tfoot>
         <tr>
             <td colspan="5"></td>
         </tr>
@@ -324,7 +324,7 @@
     style='margin-top: -1%; overflow-y: auto; height: 230px;' 
     class='pengeluaranSection'
 >
-    <button class='btn btn-primary' id='btnSavePengeluaran'><i class="fas fa-save"></i> Save Transaction</button>
+    <button class='btn btn-primary' id='btnSavePengeluaran'><i class="fas fa-save"></i> Simpan Transaksi</button>
 
     <!-- <table class='table table-hover table-bordered'>
       <tbody style='cursor: pointer;' id='pengeluaranDetail'>

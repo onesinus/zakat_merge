@@ -27,13 +27,13 @@
         <td>
             <?php echo $muzakki['id'] ?>
         </td>
-        <th>Name</th>
+        <th>Nama</th>
         <td>
             <?php echo $muzakki['name'] ?>
         </td>
     </tr>
     <tr>
-        <th>Description</th>
+        <th>Keterangan</th>
         <td>
             <?php echo $muzakki['description'] ?>            
         </td>
@@ -57,17 +57,17 @@
         <td>
             <?php echo $muzakki['description'] ?>            
         </td>
-        <th>Description</th>
+        <th>Keterangan</th>
         <td>
             <?php echo $muzakki['description'] ?>
         </td>
     </tr>
     <tr>
-        <th>Qty</th>
+        <th>Jumlah</th>
         <td>
             <?php echo $muzakki['qty'] ?>            
         </td>
-        <th>Jumlah</th>
+        <th>Total</th>
         <td>
             <?php echo $muzakki['total'] ?>
         </td>

@@ -8,10 +8,10 @@
     'role'     => ''
   );
 
-  $roles = array('Ketua', 'Bendahara', 'Anggota', 'IT');
+  $roles = array('Ketua', 'Pengurus Masjid', 'IT');
 
   $id = isset($_GET['id']) ? $_GET['id'] : 0;
-  $title = $id == 0 ? 'Add User' : 'Edit User';
+  $title = $id == 0 ? 'Tambah Pengguna' : 'Ubah Pengguna';
   if($id) {
     $query = "SELECT * FROM users WHERE id = '$id'";
     $execute_query = $conn->query($query);    
@@ -24,7 +24,7 @@
   <input type='hidden' name='id' value='<?php echo $data["id"]; ?>' />
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputUsername">Username</label>
+      <label for="inputUsername">Nama</label>
       <input 
           type="text" 
           class="form-control" 
@@ -32,7 +32,7 @@
           aria-describedby="usernameHelp"
           name='username'
           value="<?php echo $data['username'] ?>"
-          placeholder='Input your username'
+          placeholder='Input Nama Pengguna'
           autocomplete="off"
       /> 
     </div>
@@ -44,14 +44,14 @@
           id="inputPassword"
           name='password'
           value='<?php echo $data['password']; ?>'
-          placeholder='Input your password'
+          placeholder='Input Password'
           <?php echo ($id == True) ? 'disabled': '' ?>
       >
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputNik">NIK Karyawan</label>
+      <label for="inputNik">NIK Pengurus</label>
       <input 
           type="text" 
           class="form-control" 
@@ -59,7 +59,7 @@
           aria-describedby="nikHelp"
           name='nik'
           value="<?php echo $data['nik'] ?>"
-          placeholder='Input your NIK'
+          placeholder='Input NIK Pengurus'
           autocomplete="off"
       /> 
     </div>
@@ -72,7 +72,7 @@
           aria-describedby="jabatanHelp"
           name='jabatan'
           value="<?php echo $data['jabatan'] ?>"
-          placeholder='Input your Position'
+          placeholder='Input Jabatan'
           autocomplete="off"
       /> 
     </div>
@@ -98,10 +98,10 @@
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <button type="submit" class="btn btn-primary form-group col-md-12">Save</button>
+      <button type="submit" class="btn btn-primary form-group col-md-12">Simpan</button>
     </div>
     <div class="form-group col-md-6">
-      <a href='index.php?page=users' class="btn btn-secondary form-group col-md-12">Cancel</a>
+      <a href='index.php?page=users' class="btn btn-secondary form-group col-md-12">Batal</a>
     </div>
   </div>
   <hr/>

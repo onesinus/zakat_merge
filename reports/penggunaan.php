@@ -2,11 +2,11 @@
 
 <table class='table'>
     <tr>
-        <th>From Date</th>
+        <th>Dari Tanggal</th>
         <td>
             <input class='form-control col-md-8' type="date" id="from_date">
         </td>
-        <th>To Date</th>
+        <th>Ke Tanggal</th>
         <td>
             <input class='form-control col-md-8' type="date" id="to_date">
         </td>
@@ -27,10 +27,11 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Description</th>
+                <th>Keterangan</th>
+                <th>Jenis</th>
                 <th>Total</th>
                 <th>Status</th>
-                <th>Created Date</th>
+                <th>Tanggal</th>
             </tr>
         </thead>
         <tbody id="reportData">

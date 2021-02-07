@@ -28,19 +28,19 @@
      class="btn my-0 mr-md-auto"
      style='font-size: 15pt; font-weight: bold;'
   >
-    Zakat Apps
+    Aplikasi ZIS
   </a>
   <?php
    if($user):
   ?>
   <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark <?php if ($page == 'users'){ echo $activeMenuClass; } ?> " href="index.php?page=users">Users</a>
-    <a class="p-2 text-dark <?php if ($page == 'masters'){ echo $activeMenuClass; } ?>" href="index.php?page=masters">Data Master</a>
+    <a class="p-2 text-dark <?php if ($page == 'users'){ echo $activeMenuClass; } ?> " href="index.php?page=users">Pengguna</a>
+    <a class="p-2 text-dark <?php if ($page == 'masters'){ echo $activeMenuClass; } ?>" href="index.php?page=masters">Kategori ZIS</a>
     <a class="p-2 text-dark <?php if ($page == 'muzakki'){ echo $activeMenuClass; } ?>" href="index.php?page=muzakki">Muzakki</a>
     <a class="p-2 text-dark <?php if ($page == 'mustahik'){ echo $activeMenuClass; } ?>" href="index.php?page=mustahik">Mustahik</a>
     <a class="p-2 text-dark <?php if ($page == 'transactions'){ echo $activeMenuClass; } ?>" href="index.php?page=transactions">Transaksi</a>
     <button class="btn dropdown-toggle mb-1" type="button" id="dropdownReport" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Reports
+      Laporan
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownReport">
       <a class="dropdown-item" href="index.php?page=reports">Pengumpulan ZIS</a>

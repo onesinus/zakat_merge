@@ -10,7 +10,7 @@
   );
 
   $id = isset($_GET['id']) ? $_GET['id'] : 0;
-  $title = $id == 0 ? 'Add Master' : 'Edit Master';
+  $title = $id == 0 ? 'Tambah Kategori' : 'Ubah Kategori';
 
   if($id) {
     $query = "SELECT * FROM masters WHERE id = '$id'";
@@ -18,7 +18,7 @@
     $data = $execute_query->fetch_assoc();    
   }
 ?>
-<h2 class='text-center'>Form Master</h2>
+<h2 class='text-center'>Form Kategori</h2>
 <form action="actions/masters/save_data.php" method="post">
     <table class='table'>
         <tr>
@@ -41,7 +41,7 @@
             </td>
         </tr>    
         <tr>
-            <th>Description</th>
+            <th>Keterangan</th>
             <td>
                 <input 
                     type="text" 
@@ -54,8 +54,8 @@
         </tr>    
         <tr>
             <td colspan="2">
-                <button type='submit' class='btn btn-primary'><i class="fas fa-save"></i> Save Master</button>
-                <a href='index.php?page=masters' class='btn btn-secondary'><i class="fas fa-arrow-left"></i> Cancel</a>
+                <button type='submit' class='btn btn-primary'><i class="fas fa-save"></i> Simpan Kateori</button>
+                <a href='index.php?page=masters' class='btn btn-secondary'><i class="fas fa-arrow-left"></i> Batal</a>
             </td>
         </tr>
     </table>

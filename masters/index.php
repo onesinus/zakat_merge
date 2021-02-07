@@ -17,7 +17,7 @@
     class="btn btn-primary"
     style='float: left;'
 >
-    Add New Master
+    Tambah Kategori ZIS
 </a>
 <table
     class="table"
@@ -34,7 +34,7 @@
       <th
           style='width: 35%'  
       >
-        Actions
+        Aksi
     </th>
     </tr>
   </thead>

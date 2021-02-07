@@ -11,6 +11,9 @@ $(document).ready(function() {
                         ${data['note']}
                     </td>
                     <td>
+                        ${data['type']} - ${data['type_detail']}
+                    </td>
+                    <td>
                         ${data['amount']}
                     </td>
                     <td>

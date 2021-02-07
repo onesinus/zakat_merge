@@ -4,8 +4,8 @@
     $datas = $conn->query($query);    
     $master = $datas->fetch_assoc();
 ?>
-<a href='index.php?page=masters' class="btn btn-primary mb-2 float-right">List Master</a>
-<h1 class='text-center'>Detail Master</h1>
+<a href='index.php?page=masters' class="btn btn-primary mb-2 float-right">List Kategori</a>
+<h1 class='text-center'>Detail Kategori</h1>
 <table class='table'>
     <tr>
         <th>ID</th>
@@ -20,7 +20,7 @@
         </td>
     </tr>    
     <tr>
-        <th>Description</th>
+        <th>Keterangan</th>
         <td>
             <?php echo $master['description'] ?>
         </td>

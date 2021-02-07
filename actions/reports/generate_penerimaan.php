@@ -4,6 +4,7 @@
 	if (isset($_POST)) {
         $from_date = isset($_POST['from_date']) ? $_POST['from_date'] : '';
         $to_date = isset($_POST['to_date']) ? $_POST['to_date'] : '';
+        $status = isset($_POST['status']) ? $_POST['status'] : '';
 
         $query = "
             SELECT 
@@ -26,6 +27,10 @@
 
         if($from_date && $to_date) {
             $query .= "AND t.created_date >= '$from_date 00:00:00' AND t.created_date <= '$to_date 23:59:59'";
+        }
+
+        if($status != 'All') {
+            $query .= " AND t.status = '$status'";
         }
 
         if ($data = $conn->query($query)) {

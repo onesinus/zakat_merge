@@ -2,36 +2,46 @@
 
 <table class='table'>
     <tr>
-        <th>From Date</th>
+        <th>Dari Tanggal</th>
         <td>
             <input class='form-control col-md-8' type="date" id="from_date">
         </td>
-        <th>To Date</th>
+        <th>Ke Tanggal</th>
         <td>
             <input class='form-control col-md-8' type="date" id="to_date">
         </td>
+        <th>Status</th>
+        <td>
+            <select id="status" class='form-control'>
+                <option value="All">All</option>
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+            </select>
+        </td>
     </tr>    
 </table>
-<table 
-    class="table table-blue"
->
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Description / Mustahik</th>
-            <th>Type</th>
-            <th>Jumlah</th>
-            <th>Total</th>
-            <th>Status</th>
-            <th>Created Date</th>
-        </tr>
-    </thead>
-    <tbody id="reportData">
-        <tr>
-            <td colspan="6" class='text-center'>
-                No Data
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div style='overflow-y: scroll; height: 425px'>
+    <table 
+        class="table table-blue"
+    >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Keterangan / Mustahik</th>
+                <th>Jenis</th>
+                <th>Jumlah</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Tanggal</th>
+            </tr>
+        </thead>
+        <tbody id="reportData">
+            <tr>
+                <td colspan="6" class='text-center'>
+                    No Data
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 <script src="assets/js/reports/penerimaan.js"></script>

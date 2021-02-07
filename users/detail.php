@@ -14,7 +14,7 @@
         </td>
     </tr>
     <tr>
-        <th>NIK Karyawan</th>
+        <th>NIK Pengurus</th>
         <td>
             <?php echo $user['nik'] ?>
         </td>

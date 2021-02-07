@@ -1,5 +1,7 @@
 $(".btnDelete").on('click', function() {
     const id = $(this).attr('data-id');
+    const amount = $(this).attr('data-amount');
+    const idDetail = $(this).attr('data-idDetails');
     
     if(id) {
         swal({
@@ -11,7 +13,7 @@ $(".btnDelete").on('click', function() {
           })
           .then((willDelete) => {
             if (willDelete) {
-                window.location.href = `actions/transactions/delete_data.php?id=${id}`;
+                window.location.href = `actions/transactions/delete_data.php?id=${id}&amount=${amount}&idDetails=${idDetail}`;
             }
           });
     }

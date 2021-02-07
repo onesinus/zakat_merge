@@ -1,16 +1,16 @@
-<h3 class="text-center">Laporan Dana Terkumpul</h3>
+<h3 class="text-center">Laporan Pengumpulan ZIS</h3>
 
 <table class='table'>
     <tr>
-        <th>From Date</th>
+        <th>Dari Tanggal</th>
         <td>
             <input class='form-control col-md-8' type="date" id="from_date">
         </td>
-        <th>To Date</th>
+        <th>Ke Tanggal</th>
         <td>
             <input class='form-control col-md-8' type="date" id="to_date">
         </td>
-        <th>Type</th>
+        <th>Jenis</th>
         <td>
             <select id="type" class='form-control'>
                 <option value="All">All</option>
@@ -28,10 +28,10 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Description</th>
-                <th>Type</th>
+                <th>Keterangan</th>
+                <th>Jenis</th>
                 <th>Total</th>
-                <th>Created Date</th>
+                <th>Tanggal</th>
             </tr>
         </thead>
         <tbody id="reportData">

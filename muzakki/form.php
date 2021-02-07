@@ -19,7 +19,7 @@
   );
 
   $id = isset($_GET['id']) ? $_GET['id'] : 0;
-  $title = $id == 0 ? 'Add Muzakki' : 'Validasi Muzakki';
+  $title = $id == 0 ? 'Tambah Muzakki' : 'Validasi Muzakki';
   if($id) {
     $query = "SELECT * FROM muzakki WHERE id = '$id'";
     $execute_query = $conn->query($query);    
@@ -49,7 +49,7 @@
         </td>
     </tr>
     <tr>
-        <th>Name</th>
+        <th>Nama Muzakki</th>
         <td>
             <input 
                 type="text" 
@@ -163,7 +163,7 @@
         </td>
     </tr>
     <tr>
-        <th>Description</th>
+        <th>Keterangan</th>
         <td>
             <input 
                 type="text" 
@@ -177,7 +177,7 @@
         <td></td>
     </tr>
     <tr>
-        <th>Qty</th>
+        <th>Jumlah</th>
         <td>
             <input 
                 type="number" 
@@ -187,7 +187,7 @@
                 value="<?php echo $data['qty']; ?>"
             />
         </td>
-        <th>Jumlah</th>
+        <th>Total</th>
         <td>
             <input 
                 type="number" 
@@ -199,7 +199,7 @@
         </td>
     </tr>    
     <tr>
-        <th>Total</th>
+        <th>Grand Total</th>
         <td>
             <input 
                 type="number" 
@@ -227,13 +227,13 @@
                     value="Yes"
                     <?php if ($data['is_validated'] == 1) { echo "selected"; } ?>  
                 >
-                    Yes
+                    Ya
                 </option>
                 <option 
                     value="No"
                     <?php if ($data['is_validated'] == 0) { echo "selected"; } ?>  
                 >
-                    No
+                    Tidak
                 </option>
             </select>            
         </td>
@@ -247,12 +247,12 @@
     ?>
     <tr>
         <td colspan="4">
-            <button class='btn btn-primary' id='btnSaveMuzakki'><i class="fas fa-save"></i> Save Muzakki</button>
-            <a href='index.php?page=muzakki' class='btn btn-secondary'><i class="fas fa-arrow-left"></i> Cancel</a>
+            <button class='btn btn-primary' id='btnSaveMuzakki'><i class="fas fa-save"></i> Simpan Muzakki</button>
+            <a href='index.php?page=muzakki' class='btn btn-secondary'><i class="fas fa-arrow-left"></i> Batal</a>
         </td>
     </tr>
 </table>
 <p style='margin-top: -1%;'>
-    <span style='color: red;'>*</span>Note: Rekening Masjid Al Maghfirah BNI Syariah 1213445 a/n Maajid Al Magfirah  
+    <span style='color: red;'>*</span>Note: Rekening Masjid Al Maghfirah BNI Syariah 1234567890 a/n Masjid Al Magfirah  
 </p>
 <script src="assets/js/muzakki/form.js"></script>

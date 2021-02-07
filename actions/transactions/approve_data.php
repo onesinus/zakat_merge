@@ -3,8 +3,7 @@
 
 	if (isset($_GET)) {
 		$id = isset($_GET['id']) ? $_GET['id'] : 0;
-
-        $query = "UPDATE transactions SET status = 'Closed' WHERE id = '$id';";
+        $query = "UPDATE transactions SET `status` = 'Closed', `approved_date` = now() WHERE id = '$id';";
 
 		if ($conn->query($query) === TRUE) {
 			session_start();
